@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tic Tac Toe, Js Game" />
+    <meta name="author" content="Dev Raj Khadka" />
+    <title>Void Tac</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
+</head>
+
+<body>
+    <div class="startForm">
+        <div class="startForm__wrapper">
+            <img src="./Assets/selection.svg">
+            <div class="startForm__form_title">
+                <h2>Enter the Player Name</h2>
+                <p>Please enter the First Player and Second Player Name. By default, the First Player Name is "X" and
+                    the Second Player Name is "O".</p>
+            </div>
+            <form id="form">
+                <div class="startForm__inputLabel">
+                    <div>
+                        <label for="playerNameX" class="startForm__inputLabel_label">1st Player</label>
+                        <input type="text" name="playerNameX" id="playerNameX" placeholder="Player X"
+                            class="startForm__inputLabel_input" />
+                    </div>
+                    <div>
+                        <label for="playerNameO" class="startForm__inputLabel_label">2nd Player</label>
+                        <input type="text" name="playerNameO" id="playerNameO" placeholder="Player O"
+                            class="startForm__inputLabel_input" />
+                    </div>
+                </div>
+                <button type="submit" class="startForm_btn">Start Void</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="gameBoard" id="gameBoard" style="display: none;">
+        <h1>Void Tac</h1>
+        <div id="playerNames"></div>
+        <p id="message"></p>
+        <canvas id="gameCanvas" width="300" height="300"></canvas>
+        <button id="restartBtn">Reset</button>
+        <a href="index.html">Restart</a>
+    </div>
+</body>
+
+</html>
