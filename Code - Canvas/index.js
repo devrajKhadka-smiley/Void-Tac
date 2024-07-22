@@ -5,7 +5,6 @@ let playerO = "";
 
 let options = ["", "", "", "", "", "", "", "", ""];
 
-// DOM Elements
 const startForm = document.getElementById("form");
 const playerNameInputX = document.getElementById("playerNameX");
 const playerNameInputO = document.getElementById("playerNameO");
@@ -15,7 +14,7 @@ const message = document.getElementById("message");
 
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
-const restartBtn = document.getElementById("restartBtn");
+const restartBtn = document.getElementById("resetBtn");
 
 const winCondition = [
   [0, 1, 2],
@@ -116,10 +115,14 @@ function checkWinner() {
   }
 
   if (roundWon) {
-    message.textContent = `${CurrentPlayer === "X" ? playerO : playerX} Wins!`;
+    message.textContent = `${CurrentPlayer == "X" ? playerX : playerO} Wins!`;
+
+    alert(`${CurrentPlayer == "X" ? playerX : playerO} Wins!`);
+
     gameActive = false;
   } else if (!options.includes("")) {
     message.textContent = "Draw!";
+    alert(`Match is Draw`);
     gameActive = false;
   }
 }
@@ -128,6 +131,7 @@ function restartGame() {
   CurrentPlayer = "X";
   options = ["", "", "", "", "", "", "", "", ""];
   message.textContent = `${playerX}'s turn`;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawBoard();
   gameActive = true;
 }

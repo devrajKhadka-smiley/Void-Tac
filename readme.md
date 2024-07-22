@@ -14,6 +14,8 @@
 
 Void Tac is a classic two-player game implemented using JavaScript, played on a 3x3 grid. Players take turns marking cells with their symbol (X or O) with the objective of aligning three of their symbols in a row, column, or diagonal.
 
+## Game Link
+[Void Tac]()
 # Game Rules | Winning Conditions
 
 - For Each Players(i.e. Two Players) indicates individually with "X" and "O".
@@ -30,7 +32,7 @@ Void Tac is a classic two-player game implemented using JavaScript, played on a 
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App SS](/aa.png)
 
 ## Technologies Used
 
